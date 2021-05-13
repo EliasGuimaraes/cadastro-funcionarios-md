@@ -17,9 +17,11 @@ def render_publication_done(request):
         'email': request.POST.get('email'),
         'telefone': request.POST.get('telefone'),
         'cpf': request.POST.get('cpf'),
+        'rg': request.POST.get('rg'),
         'data_de_nascimento': request.POST.get('data_de_nascimento')
     }
 
     publication = Publication(**publication_data)
     publication.save()
     return render(request, 'publication_done.html', {'nome': publication.nome})
+
