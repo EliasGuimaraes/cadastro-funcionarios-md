@@ -1,5 +1,5 @@
 from django.contrib import admin
-from blog.models import Publication
+from registermd.models import Publication
 
 # Register your models here.
 class PublicationAdmin(admin.ModelAdmin):
@@ -10,3 +10,4 @@ class PublicationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Publication, PublicationAdmin)
+
