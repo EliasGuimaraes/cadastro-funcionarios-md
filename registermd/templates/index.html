@@ -3,82 +3,64 @@
 <html lang="pt/br">
 <head>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Publicação blog</title>
-
+    <title>Cadastro MD</title>
 </head>
 <body>
-<form name="publication" action="publication/done" method="post">
-   {% csrf_token %}
-<div class="background">
-  <div class="container">
-    <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <div class="screen-header-button close"></div>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
-        </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-        </div>
-      </div>
-      <div class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title">
-            <span>Publicação</span>
-            <span>blogGroger</span>
-          </div>
-          <div class="app-contact">É apenas um exemplo de aula</div>
-        </div>
-        <div class="screen-body-item">
-          <div class="app-form">
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="Região" name="regiao">
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="País" name="pais">
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="Nome" name="nome">
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="Cargo" name="cargo">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="Time" name="time">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="Email" name="email">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="Telefone" name="telefone">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="CPF" name="cpf">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="RG" name="rg">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="Data de nascimento" name="data_de_nascimento">
-            </div>
-            <div class="app-form-group buttons">
-              <button class="app-form-button" type="submit">PUBLICAR</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="credits">
-      <p>
-          inspired by
-          <a class="credits-link" href="https://github.com/g-roger" target="_blank">GRoger Enterprises</a>
-      </p>
-    </div>
-  </div>
-</div>
-</form>
+    <form name="publication" action="publication/done" method="post">
+    <nav class="nav">
+        <img src="../static/images/Bayer.png" alt="">
+        <img src="../static/images/MarketDevelopment_LATAM_WordMark.png" style="margin-left: 20px" alt="">
+    </nav>
+    <header>
+        <b>Cadastro Funcionários</b>
+    </header>
+
+    <main class="container">
+
+            {% csrf_token %}
+            <section class="left">
+                <label >Região:</label>
+                <select class="app-form-control" name="regiao">
+                    <option value="BRASIL">BRASIL</option>
+                    <option value="NORLA">NORLA</option>
+                    <option value="CONOSUR">CONOSUR</option>
+                </select>
+                <label >País:</label>
+                <input type="text" placeholder="País" name="pais">
+                <label >Nome:</label>
+                <input type="text" placeholder="Nome" name="nome">
+                <label >Cargo:</label>
+                <input type="text" placeholder="Cargo" name="cargo">
+                <label >Time:</label>
+                <select class="app-form-control" name="time">
+                    <option value="A&KT">A&KT</option>
+                    <option value="AS&D, Integration">AS&D, Integration</option>
+                    <option value="All MD Team">All MD Team</option>
+                    <option value="Corn & Sorghum">Corn & Sorghum</option>
+                    <option value="Crop Protection">Crop Protection</option>
+                    <option value="MDR & FOE">MDR & FOE</option>
+                    <option value="Soybean & Cotton">Soybean & Cotton</option>
+                </select>
+            </section>
+            <section class="right">
+                <label >Email:</label>
+                <input type="text" placeholder="Email" name="email">
+                <label >Telefone:</label>
+                <input type="text" placeholder="Telefone" name="telefone">
+                <label >CPF:</label>
+                <input type="text" placeholder="CPF" name="cpf">
+                <label >RG:</label>
+                <input type="text" placeholder="RG" name="rg">
+                <label >Data de Nascimento:</label>
+                <input type="text" placeholder="Data de Nascimento" name="data_de_nascimento">
+            </section>
+    </main>
+
+    <footer>
+        <input type="submit" value="Cadastrar" style="margin-top: 100px">
+    </footer>
+    </form>
 </body>
 </html>
+
+
